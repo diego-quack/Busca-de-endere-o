@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +7,71 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
-    <p>Busca de Endereço</p>
-    <div class="container">
-        <p>Cep:</p>
-        <input type="text" id="campo_CEP">
-    </div>
-    <div>
-        <button	class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-		Buscar
-</button>
+    
+    <div class="conteiner">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-auto">
+                <form>
+                    <label class="form-label">Cep: <br>
+                    <input type="text" id="cep" value="" size="20" maxlength="9" /></label><br />
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#JanelaEndereco">
+                                Buscar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    <div id="JanelaEndereco" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Endereço</h4>
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="my-4 col">
+                            <label class="form-label">Logradouro: <br>
+                            <input class="form-control" name="rua" type="text" id="rua" size="50" readonly/></label>
+                        </div>
+                        <div class="my-4 col">
+                            <label class="form-label">Bairro: <br>
+                            <input class="form-control"name="bairro" type="text" id="bairro" size="50" readonly/></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="my-4 col">
+                            <label class="form-label">Cidade: <br>
+                            <input class="form-control" name="cidade" type="text" id="cidade" size="50" readonly/></label>
+                        </div>
+                        <div class="my-4 col">
+                            <label class="form-label">Estado: <br>
+                            <input class="form-control" name="uf" type="text" id="uf" size="50" readonly/></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="my-4 col">
+                            <label class="form-label">Complemento: <br>
+                            <input class="form-control" name="complemento" type="text" id="complemento" size="50"/></label>
+                        </div>
+                        <div class="my-4 col">
+                            <label class="form-label">DDD: <br>
+                            <input class="form-control" name="ddd" type="text" id="ddd" size="50"/></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/geen_js/jquery-3.6.0.js"></script>
+    <script src="/js/js-cep.js"></script>
 </body>
 </html>
