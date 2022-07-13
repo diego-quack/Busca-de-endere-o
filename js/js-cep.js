@@ -29,12 +29,14 @@ $(document).ready(function(){
                         else {
                             //CEP pesquisado não foi encontrado.
                             alert("CEP não encontrado.");
+                            $("#cep").val("");
                         }
                     });
                 }
                 else {
                     //cep é inválido.
                     alert("Formato de CEP inválido.");
+                    $("#cep").val("");
                 }
             }
             else {
